@@ -23,4 +23,5 @@
 hs_err_pid*
 
 target
-.idea
+!target/conference-track-management-1.0-SNAPSHOT.jar
+.idea/*
