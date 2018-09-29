@@ -1,13 +1,26 @@
 package com.myself.Entity;
 
+import com.myself.util.DateUtil;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
+/**
+ * @author Bruno Meurer
+ * @version 1.0
+ */
 public class Talk {
     private String name;
     private int minutes;
     private Calendar time;
     private SimpleDateFormat format;
+
+    public Talk (String name, Calendar time, int minutes) {
+        this.name = name;
+        this.minutes = minutes;
+        this.time = time;
+        this.format = new SimpleDateFormat("hh:mma");
+    }
 
     public Talk (String name) {
         this.name = name;
@@ -37,7 +50,7 @@ public class Talk {
     }
 
     public void setTime(Calendar time) {
-        this.time = time;
+        this.time = DateUtil.INSTANCE.newInstance(time);
     }
 
     @Override
@@ -45,7 +58,6 @@ public class Talk {
         return this.format
                 .format(time.getTime())
                 .concat(" ")
-                .concat(this.name)
-                .concat(" - " + minutes);
+                .concat(this.name);
     }
 }

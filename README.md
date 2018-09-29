@@ -4,12 +4,13 @@ import and process a txt file to organize conferences
 ```
 mvn install
 ```
-# Run
+# Run it
 ```
 java -jar target/conference-track-management-1.0-SNAPSHOT.jar c:/temp/input.txt
 ```
 
 # TODO
-- [ ] create .gitignore
-- [ ] create tests
-- [ ] set javadocs
+- [x] create the logic
+- [x] create .gitignore
+- [x] unit tests
+- [x] javadocs

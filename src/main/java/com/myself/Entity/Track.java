@@ -1,14 +1,19 @@
 package com.myself.Entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Bruno Meurer
+ * @version 1.0
+ */
 public class Track {
     private String name;
     private List<Talk> talks;
 
-    public Track(String name, List<Talk> talks) {
-        this.talks = talks;
-        this.name = name;
+    public Track () {
+        this.name = "";
+        this.talks = new ArrayList<>();
     }
 
     public String getName() {
@@ -25,6 +30,10 @@ public class Track {
 
     public void setTalks(List<Talk> talks) {
         this.talks = talks;
+    }
+
+    public void addTalk (Talk talk) {
+        this.talks.add(talk);
     }
 
     @Override
