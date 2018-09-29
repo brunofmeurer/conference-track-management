@@ -45,6 +45,7 @@ public class Talk {
         return this.format
                 .format(time.getTime())
                 .concat(" ")
-                .concat(this.name);
+                .concat(this.name)
+                .concat(" - " + minutes);
     }
 }
